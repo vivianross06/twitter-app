@@ -42,7 +42,7 @@ class UserProfileViewController: UIViewController {
             self.userNameLabel.text = String(format: "@%@", profile["screen_name"] as! String)
             self.taglineLabel.text = profile["description"] as! String
             self.followersLabel.text = String(format: "Followers: %@", profile["followers_count"] as! CVarArg)
-            self.followingLabel.text = String(format: "Following: %@", profile["following"] as! CVarArg)
+            self.followingLabel.text = String(format: "Following: %@", profile["friends_count"] as! CVarArg)
             self.tweetsLabel.text = String(format: "Tweets: %@", profile["statuses_count"] as! CVarArg)
         }, failure: { (error) in
             print("Unable to load profile \(error)")
